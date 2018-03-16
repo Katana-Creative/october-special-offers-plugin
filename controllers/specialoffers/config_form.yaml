@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Special Offer
+
+# Model Form Field configuration
+form: $/katana/specialoffers/models/specialoffer/fields.yaml
+
+# Model Class name
+modelClass: Katana\SpecialOffers\Models\SpecialOffer
+
+# Default redirect location
+defaultRedirect: katana/specialoffers/specialoffers
+
+# Create page
+create:
+    title: Create Special Offer
+    redirect: katana/specialoffers/specialoffers/update/:id
+    redirectClose: katana/specialoffers/specialoffers
+
+# Update page
+update:
+    title: Edit Special Offer
+    redirect: katana/specialoffers/specialoffers
+    redirectClose: katana/specialoffers/specialoffers
+
+# Preview page
+preview:
+    title: Preview Special Offer

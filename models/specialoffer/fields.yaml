@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        searchable: true
+        span: left
+
+    buy_url:
+        label: Book Url
+        searchable: true
+        span: right
+
+    description:
+        label: Description
+        searchable: true
+        type: richeditor
+        size: huge
+
+    photo:
+        label: Photos
+        searchable: true
+        type: fileupload

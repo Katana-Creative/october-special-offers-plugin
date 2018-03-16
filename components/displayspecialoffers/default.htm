@@ -1,0 +1,30 @@
+
+{% for offer in specialoffers %}
+<hr>
+<div class="row">
+    <div class="col-sm-2">
+        <a type="button" href="{{ offer.buy_url }}" class="btn no-radius book-btn text-uppercase">
+            {{ 'Buy Offer'|_ }}
+        </a>
+    </div>
+    <div class="col-sm-10 reveal-offer">
+        <h3 class="red-text text-uppercase offer-title" title="{{ offer.name }}">
+            {{ offer.name }}
+            <button class="red-text">
+                <i class="fa fa-chevron-right right-arrow"></i>
+                <i class="fa fa-chevron-down down-arrow"></i>
+            </button>
+        </h3>
+    </div>
+</div>
+<div class="row offer-details">
+    <div class="col-sm-{% if offer | length <= 0 %}12{% else %}7{% endif %}">
+        {{ offer.description | raw }}
+    </div>
+    {% if offer.photo | length > 0 %}
+        <div class="col-sm-5">
+            <img src="{{ offer.photo.thumb(300,300) }}" alt="">
+        </div>
+    {% endif %}
+</div>
+{% endfor %}
